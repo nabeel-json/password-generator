@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💾 Password Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex justify-center items-center h-screen font-mono">
+    <div
+      class="flex flex-col gap-4 shadow-md rounded-md py-6 px-4 w-[min(500px,80%)]"
+    >
+      <h1 class="font-bold text-2xl">
+        Generate a <br /><span class="text-blue-500">Random Password</span>
+      </h1>
+      <div
+        id="password-appear"
+        class="bg-slate-200 py-2 px-5 min-h-10 rounded-sm"
+      ></div>
+      <input
+        type="range"
+        min="8"
+        max="30"
+        value="8"
+        class="slider"
+        id="myRange"
+      />
+      <p>Length: <span id="rangeValue">👆</span></p>
+      <button
+        id="generate-button"
+        class="py-2 inline-block bg-blue-500 hover:bg-blue-600 transition-colors rounded-sm"
+      >
+        Generate
+      </button>
+      <button
+        id="copy-button"
+        class="py-2 inline-block bg-blue-500 hover:bg-blue-600 transition-colors rounded-sm"
+      >
+        Copy
+      </button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
